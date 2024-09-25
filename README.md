@@ -20,7 +20,7 @@
 
 {Make a list of websites that you found helpful in this project}
 
-- [Web Site Name](http://url.link.goes.here)
+- [W3 Schools](https://www.w3schools.com/java/java_getstarted.asp)
 - [Web Site Name](http://url.link.goes.here)
 
 # Future Work
@@ -30,3 +30,10 @@
 - Item 1
 - Item 2
 - Item 3
+
+# Things I learned
+
+- There is very specific naming rules you need to follow otherwise variables can't be read.
+- Java is object oriented and works with classes.
+- along with private there is another way to keep your code safe with final. "final" allows you to pervent variable changes outside of the constructor or declaration.
+- There is a new Switch Case in Java that uses "->" instead of break.
