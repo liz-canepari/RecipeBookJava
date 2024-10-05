@@ -13,7 +13,9 @@ public class UI {
             switch (choice){
                 case 1 -> recipeManager.addRecipe(scan);
                 case 2 -> selectAndManageRecipe();
-                case 3 -> {
+                case 3 -> saveRecipes();
+                case 4 -> loadRecipes();
+                case 5 -> {
                     running = false;
                     System.out.println("Goodbye!");}
                 default -> System.out.println("Invalid choice. Please try again.");
@@ -25,7 +27,9 @@ public class UI {
         System.out.println("Recipe Book Menu:");
         System.out.println("1. Add Recipe");
         System.out.println("2. Select a Recipe");
-        System.out.println("3. Exit");
+        System.out.println("3. Save Recipe Book to File");
+        System.out.println("4. Load Recipes Book from File");
+        System.out.println("5. Exit");
         System.out.print("Enter your choice: ");
     }
 
@@ -63,5 +67,17 @@ public class UI {
                 System.out.println("Returning to main menu...");
             default -> System.out.println("Invalid choice. Returning to main menu...");
         }
+    }
+
+    private void saveRecipes() {
+        System.out.print("Enter filename to save recipes: ");
+        String filename = scan.nextLine();
+        recipeManager.saveRecipesToFile(filename);
+    }
+
+    private void loadRecipes() {
+        System.out.print("Enter filename to load recipes: ");
+        String filename = scan.nextLine();
+        recipeManager.loadRecipesFromFile(filename);
     }
 }
