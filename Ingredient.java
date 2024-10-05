@@ -1,8 +1,8 @@
 public class Ingredient {
 
     private final String name;
-    private final double quantity;
-    private final String unit;
+    private double quantity;
+    private String unit;
 
     public Ingredient(String name, double quantity, String unit) {
         this.name = name;
@@ -21,6 +21,14 @@ public class Ingredient {
 
     public String getUnit() {
         return unit;
+    }
+
+    public void setQuantity(double quantity) {
+        this.quantity = quantity;
+    }
+
+    public void setUnit(String unit) {
+        this.unit = unit;
     }
     
 }
