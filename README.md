@@ -1,10 +1,6 @@
 # Overview
 
-{Important! Do not say in this section that this is college assignment. Talk about what you are trying to accomplish as a software engineer to further your learning.}
-
-{Provide a description of the software that you wrote to demonstrate the Java language.}
-
-{Describe your purpose for writing this software.}
+This project is a recipe book application designed to allow users to add, edit, view, and delete recipes. The goal is to deepen my understanding of Java programming concepts and object-oriented principles. I aimed to create a user-friendly console application that demonstrates the use of various Java features such as collections, loops, conditionals, and methods. By building this software, I wanted to enhance my skills in Java and prepare for future projects that may require more complex functionality.
 
 {Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running and a walkthrough of the code. Focus should be on sharing what you learned about the language syntax.}
 
@@ -12,28 +8,27 @@
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
-
-{Describe the programming language that you used and any libraries.}
+I developed the software using Visual Studio Code as my Integrated Development Environment (IDE). The programming language used is Java, specifically version [insert your version here]. I utilized the Java Collections Framework, particularly ArrayList for managing lists of recipes and ingredients. The application is structured using classes to represent the main components of the recipe book.
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
 
 - [W3 Schools](https://www.w3schools.com/java/java_getstarted.asp)
-- [Web Site Name](http://url.link.goes.here)
+- [GeeksforGeeks Java Tutorial](https://www.geeksforgeeks.org/java/)
 
 # Future Work
 
-{Make a list of things that you need to fix, improve, and add in the future.}
-
-- Item 1
-- Item 2
-- Item 3
+- Allow users to scale recipes based on the number of servings.
+- Implement file input/output to save and load recipes from a file.
+- Enhance the user interface to include a graphical user interface (GUI).
+- Add search functionality to quickly find recipes by name or ingredient.
 
 # Things I learned
 
-- There is very specific naming rules you need to follow otherwise variables can't be read.
-- Java is object oriented and works with classes.
-- along with private there is another way to keep your code safe with final. "final" allows you to pervent variable changes outside of the constructor or declaration.
-- There is a new Switch Case in Java that uses "->" instead of break.
+
+The enhanced switch case in Java can simplify code readability with the -> syntax.
+
+- There are specific naming conventions in Java, such as camelCase for variable names and PascalCase for class names.
+- Java is an object-oriented language that emphasizes the use of classes and objects for code organization and reusability.
+- Using the final keyword can protect variables from being modified outside of their declaration context.
+- The enhanced switch case in Java can simplify code readability with the -> syntax.
