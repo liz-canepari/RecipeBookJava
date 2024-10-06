@@ -3,6 +3,7 @@ public class UI {
     private final RecipeManager recipeManager = new RecipeManager();
     private final Scanner scan = new Scanner(System.in);
     
+    // This method displays the opening menu and allows the user to select an option
     public void run() {
         boolean running = true;
         while (running) {
@@ -23,6 +24,7 @@ public class UI {
         }
     }
 
+    // This method displays the opening menu
     private void displayOpeningMenu() {
         System.out.println("Recipe Book Menu:");
         System.out.println("1. Add Recipe");
@@ -33,6 +35,8 @@ public class UI {
         System.out.print("Enter your choice: ");
     }
 
+
+    // This method allows the user to select a recipe from the recipe book to manage it
     private void selectAndManageRecipe() {
         Recipe selectedRecipe = recipeManager.selectRecipe(scan);
 
@@ -43,6 +47,7 @@ public class UI {
         }
     }
 
+    // This method displays a recipe from the recipe book to allow the user to read the recipe details
     private void displayRecipeManagementMenu(Recipe recipe) {
         System.out.println("\nManaging Recipe: " + recipe.getName());
         System.out.println("1. View Recipe");
@@ -69,12 +74,14 @@ public class UI {
         }
     }
 
+    // This method saves the recipe book to a file
     private void saveRecipes() {
         System.out.print("Enter filename to save recipes: ");
         String filename = scan.nextLine();
         recipeManager.saveRecipesToFile(filename);
     }
 
+    // This method loads recipes from a file
     private void loadRecipes() {
         System.out.print("Enter filename to load recipes: ");
         String filename = scan.nextLine();

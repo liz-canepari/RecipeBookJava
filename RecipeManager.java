@@ -9,6 +9,7 @@ public class RecipeManager {
     
     private final ArrayList<Recipe> recipeBook = new ArrayList<>();
 
+    // This method adds a new recipe to the recipe book
     public void addRecipe(Scanner scan) {
 
         System.out.print("Enter the name of the recipe: ");
@@ -19,6 +20,7 @@ public class RecipeManager {
 
         boolean addingIngredients = true;
 
+        // Add ingredients to the recipe
         while (addingIngredients) {
 
             System.out.println("Enter Ingredient Name (or type 'done' to finish): ");
@@ -49,6 +51,7 @@ public class RecipeManager {
         System.out.println("Recipe Added: " + name);
     }
 
+    // This method allows the user to select a recipe from the recipe book to manage it
     public Recipe selectRecipe(Scanner scan){
 
         if (recipeBook.isEmpty()){
@@ -76,6 +79,7 @@ public class RecipeManager {
 
     }
 
+    // This method displays a recipe from the recipe book to allow the user to read the recipe details
     public void displayRecipe(Recipe recipe) {
         System.out.println("\nRecipe: " + recipe.getName());
         System.out.println("Ingredients: ");
@@ -89,10 +93,12 @@ public class RecipeManager {
     
     }
     
+    // This method deletes a recipe from the recipe book
     public void deleteRecipe(Recipe recipe) {
         recipeBook.remove(recipe);
     }
 
+    // This method allows the user to edit a recipe in the recipe book
     public void editRecipe(Recipe recipe, Scanner scan) {
         System.out.println("Editing Recipe: " + recipe.getName());
 
@@ -109,7 +115,7 @@ public class RecipeManager {
             System.out.println("3. Delete ingredient");
             System.out.println("4. Done editing");
             System.out.print("Choose an option: ");
-            int choice = scan.nextInt() - 1; // subtract 1 to account for 0-based indexing();
+            int choice = scan.nextInt(); // subtract 1 to account for 0-based indexing();
 
             switch (choice) {
                 case 1 -> {
@@ -160,10 +166,12 @@ public class RecipeManager {
     
     }
 
+    // This method checks if the recipe book has any recipes
     public boolean hasRecipes() {
         return !recipeBook.isEmpty();
     }
     
+    // This method saves the recipe book to a file
     public void saveRecipesToFile(String filename) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
             for (Recipe recipe : recipeBook) {
@@ -178,6 +186,8 @@ public class RecipeManager {
             System.err.println("Error saving recipes: " + e.getMessage());
         }
     }
+
+    // This method loads the recipe book from a file
 
     public void loadRecipesFromFile(String filename) {
     try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
