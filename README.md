@@ -19,7 +19,6 @@ I developed the software using Visual Studio Code as my Integrated Development E
 # Future Work
 
 - Allow users to scale recipes based on the number of servings.
-- Implement file input/output to save and load recipes from a file.
 - Enhance the user interface to include a graphical user interface (GUI).
 - Add search functionality to quickly find recipes by name or ingredient.
 
